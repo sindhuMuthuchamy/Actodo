@@ -83,7 +83,7 @@ function Signup(props) {
                     <button
                         className="bg-[#FCA201] w-24 p-1 rounded-md"
                         onClick={handleSignup}
-                        // disabled={!Euser || !Epassword || !confirmPassword}
+                        disabled={!Euser || !Epassword || !confirmPassword}
                     >
                         Sign-up
                     </button>

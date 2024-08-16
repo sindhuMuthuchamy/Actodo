@@ -11,20 +11,16 @@ function Landing(){
         const location = useLocation()
         const user = location.state?.user; 
 
-        // State to hold the current date and time
     const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
-    // Update date and time every second
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentDateTime(new Date());
         }, 1000);
 
-        // Clean up the timer on component unmount
         return () => clearInterval(timer);
     }, []);
 
-    // Format the date and time
     const formatDate = (date) => {
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
